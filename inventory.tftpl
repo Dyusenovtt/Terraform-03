@@ -1,0 +1,10 @@
+
+%{ for group in ["webservers", "databases", "storage"] ~}
+[${group}]
+%{ for name, vm in vms ~}
+%{ if vm.group == group ~}
+${vm.hostname} ansible_host=${vm.ip} fqdn=${vm.fqdn}
+%{ endif ~}
+%{ endfor ~}
+
+%{ endfor ~}
