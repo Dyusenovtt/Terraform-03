@@ -1,23 +1,15 @@
-# Terraform files
+
 *.tfstate
 *.tfstate.*
 .terraform*
 *.lock.hcl
-
-# Sensitive files
 key.json
 personal.auto.tfvars
 *.auto.tfvars
-
-# SSH keys
 *.pem
 *.key
 id_rsa
 id_rsa.pub
 ~/.ssh/*
-
-# Inventory file (создается автоматически)
 inventory.ini
-
-# Logs
 *.log
